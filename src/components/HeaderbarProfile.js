@@ -10,6 +10,7 @@ import CIcon from "@coreui/icons-react";
 
 let profileName = "Dev Computerlogy";
 let profileImg = "avatars/6.jpg";
+
 const HeaderbarProfile = () => {
   return (
     <CDropdown inNav className="c-header-nav-items mx-2" direction="down">

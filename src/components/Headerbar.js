@@ -35,10 +35,6 @@ const Headerbar = () => {
         onClick={toggleSidebar}
       />
       
-       <CHeaderBrand>
-        <CIcon name="logo" height="30" alt="Logo"/>
-      </CHeaderBrand>
-
       {/* use for margin other nav to Right */}
       <CHeaderNav className="d-md-down-none mr-auto"></CHeaderNav>
 
