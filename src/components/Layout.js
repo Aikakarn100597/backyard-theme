@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "./Sidebar";
-import Content from './Content'
+import Content from "./Content";
+import Headerbar from "./Headerbar";
 
 const TheLayout = () => {
   return (
@@ -8,7 +9,7 @@ const TheLayout = () => {
       <div className="c-app c-default-layout">
         <Sidebar />
         <div className="c-wrapper">
-          {/* <TheHeader/> */}
+          <Headerbar />
           <div className="c-body">
             <Content />
           </div>
