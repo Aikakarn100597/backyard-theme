@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import HeaderbarProfile from "./HeaderbarProfile";
-import { CHeader, CHeaderBrand, CToggler, CSubheader, CBreadcrumbRouter, CHeaderNav } from "@coreui/react";
-import CIcon from "@coreui/icons-react";
+import { CHeader, CToggler, CSubheader, CBreadcrumbRouter, CHeaderNav } from "@coreui/react";
+
 
 // routes config
 import routes from '../routes'
