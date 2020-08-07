@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'));
+const Dashboard = React.lazy(() => import('./components/Dashboard'));
 const Company = React.lazy(()=> import('./components/company/index'))
 const ManageUser = React.lazy(() => import('./components/user/ManageUser'))
 const UserOnline = React.lazy(() => import('./components/user/UserOnline'))
