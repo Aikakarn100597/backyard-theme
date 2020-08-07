@@ -82,7 +82,7 @@ const usersData = [
 
 function Company() {
   //const [details, setDetails] = useState([]);
-  const [items, setItems] = useState(usersData);
+  const [items] = useState(usersData);
 
   const fields = [
     { key: "name", _style: { width: "20%" } },
@@ -148,15 +148,15 @@ function Company() {
                     Manage
                   </CDropdownToggle>
                   <CDropdownMenu>
-                    <CDropdownItem><CIcon name="cilMinus" />Reward Ticket</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Ready</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Mention</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Token Pantip</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Job Queue</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Trigger Condition</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Bida</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Feed History</CDropdownItem>
-                    <CDropdownItem><CIcon name="cilMinus" />Manual Add Link</CDropdownItem>
+                    <CDropdownItem href="/rewardticket" ><CIcon name="cilMinus" />Reward Ticket</CDropdownItem>
+                    <CDropdownItem href="/ready" ><CIcon name="cilMinus" />Ready</CDropdownItem>
+                    <CDropdownItem href="/mention" ><CIcon name="cilMinus" />Mention</CDropdownItem>
+                    <CDropdownItem href="/tokenpantip" ><CIcon name="cilMinus" />Token Pantip</CDropdownItem>
+                    <CDropdownItem href="/jobqueue" ><CIcon name="cilMinus" />Job Queue</CDropdownItem>
+                    <CDropdownItem href="/triggercondition" ><CIcon name="cilMinus" />Trigger Condition</CDropdownItem>
+                    <CDropdownItem href="/bida" ><CIcon name="cilMinus" />Bida</CDropdownItem>
+                    <CDropdownItem href="/feedhistory" ><CIcon name="cilMinus" />Feed History</CDropdownItem>
+                    <CDropdownItem href="/manualaddlink" ><CIcon name="cilMinus" />Manual Add Link</CDropdownItem>
                   </CDropdownMenu>
                 </CDropdown>
               </td>
