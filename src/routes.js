@@ -13,7 +13,6 @@ const TriggerCondition = React.lazy(()=> import('./components/company/manage/Tri
 const Bida = React.lazy(()=> import('./components/company/manage/Bida'))
 const FeedHistory = React.lazy(()=> import('./components/company/manage/FeedHistory'))
 const ManualAddLink = React.lazy(()=> import('./components/company/manage/ManualAddLink'))
-
 //User
 const ManageUser = React.lazy(() => import('./components/user/ManageUser'))
 const UserOnline = React.lazy(() => import('./components/user/UserOnline'))
