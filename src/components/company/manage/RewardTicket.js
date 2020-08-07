@@ -23,28 +23,35 @@ function RewardTicket() {
   const [items] = useState(usersData);
   return (
     <CCard>
-      <CCardHeader>Reward Ticket ({items.length})</CCardHeader>
-      <CCardBody>
-        <br />
-        <CDataTable
-          items={usersData}
-          fields={fields}
-          striped
-          responsive
-          columnFilter
-          tableFilter
-          footer
-          itemsPerPageSelect
-          itemsPerPage={10}
-          outlined
-          hover
-          sorter
-          pagination
-          addTableClasses={{}}
-          scopedSlots={{}}
-        />
-      </CCardBody>
-    </CCard>
+    <CCardHeader>
+        <p style={{ paddingLeft: 15, marginTop: "auto" }}>
+          Ticket ({items.length})
+        </p>
+    </CCardHeader>
+    <CCardBody>
+      <br />
+      <CDataTable
+        items={usersData}
+        fields={fields}
+        striped
+        responsive
+        columnFilter
+        tableFilter
+        footer
+        itemsPerPageSelect
+        itemsPerPage={10}
+        outlined
+        hover
+        sorter
+        pagination
+        addTableClasses={{}}
+        scopedSlots={{
+          
+        }}
+      />
+    </CCardBody>
+  </CCard>
+
   );
 }
 

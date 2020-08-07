@@ -10,6 +10,7 @@ import {
   CDropdownItem,
   CButton,
   CRow,
+  CCardHeader,
 } from "@coreui/react";
 import CIcon from "@coreui/icons-react";
 
@@ -78,8 +79,6 @@ const usersData = [
   },
 ];
 
-
-
 function Company() {
   //const [details, setDetails] = useState([]);
   const [items] = useState(usersData);
@@ -92,20 +91,27 @@ function Company() {
     { key: "actions", _style: { width: "5%" }, sorter: false, filter: false },
   ];
 
- 
-
   return (
     <CCard>
-      <CCardBody>
-        <CRow >
-          <h2 style={{paddingLeft: 15 , marginTop:"auto"
-          }}>Company ({items.length})</h2>
-          <p style = {{ margin: "auto"}}></p>
-          <CButton style={{width:100}} color={"success"} size={'sm'} className="m-2">
-            <CIcon name={"cilPlus"}/>
+      <CCardHeader>
+        {" "}
+        <CRow>
+          <p style={{ paddingLeft: 15, marginTop: "auto" }}>
+            Company ({items.length})
+          </p>
+          <p style={{ margin: "auto" }}></p>
+          <CButton
+            style={{ width: 100 }}
+            color={"success"}
+            size={"sm"}
+            className="m-2"
+          >
+            <CIcon name={"cilPlus"} />
           </CButton>
-          <p style = {{ paddingRight: 15}}></p>
+          <p style={{ paddingRight: 15 }}></p>
         </CRow>
+      </CCardHeader>
+      <CCardBody>
         <br />
         <CDataTable
           items={usersData}
@@ -127,12 +133,20 @@ function Company() {
               <td>
                 <CButtonGroup>
                   <button
-                    style={{outline: "none", border: "none", backgroundColor: "Transparent" }}
+                    style={{
+                      outline: "none",
+                      border: "none",
+                      backgroundColor: "Transparent",
+                    }}
                   >
                     <CIcon name={"cilPencil"} size="lg" />
                   </button>
                   <button
-                    style={{ outline: "none", border: "none", backgroundColor: "Transparent" }}
+                    style={{
+                      outline: "none",
+                      border: "none",
+                      backgroundColor: "Transparent",
+                    }}
                   >
                     {" "}
                     <CIcon name={"cilTrash"} size="lg" />
@@ -148,15 +162,42 @@ function Company() {
                     Manage
                   </CDropdownToggle>
                   <CDropdownMenu>
-                    <CDropdownItem href="/rewardticket" ><CIcon name="cilMinus" />Reward Ticket</CDropdownItem>
-                    <CDropdownItem href="/ready" ><CIcon name="cilMinus" />Ready</CDropdownItem>
-                    <CDropdownItem href="/mention" ><CIcon name="cilMinus" />Mention</CDropdownItem>
-                    <CDropdownItem href="/tokenpantip" ><CIcon name="cilMinus" />Token Pantip</CDropdownItem>
-                    <CDropdownItem href="/jobqueue" ><CIcon name="cilMinus" />Job Queue</CDropdownItem>
-                    <CDropdownItem href="/triggercondition" ><CIcon name="cilMinus" />Trigger Condition</CDropdownItem>
-                    <CDropdownItem href="/bida" ><CIcon name="cilMinus" />Bida</CDropdownItem>
-                    <CDropdownItem href="/feedhistory" ><CIcon name="cilMinus" />Feed History</CDropdownItem>
-                    <CDropdownItem href="/manualaddlink" ><CIcon name="cilMinus" />Manual Add Link</CDropdownItem>
+                    <CDropdownItem href="/company/rewardticket">
+                      <CIcon name="cilMinus" />
+                      Reward Ticket
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/ready">
+                      <CIcon name="cilMinus" />
+                      Ready
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/mention">
+                      <CIcon name="cilMinus" />
+                      Mention
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/tokenpantip">
+                      <CIcon name="cilMinus" />
+                      Token Pantip
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/jobqueue">
+                      <CIcon name="cilMinus" />
+                      Job Queue
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/triggercondition">
+                      <CIcon name="cilMinus" />
+                      Trigger Condition
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/bida">
+                      <CIcon name="cilMinus" />
+                      Bida
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/feedhistory">
+                      <CIcon name="cilMinus" />
+                      Feed History
+                    </CDropdownItem>
+                    <CDropdownItem href="/company/manualaddlink">
+                      <CIcon name="cilMinus" />
+                      Manual Add Link
+                    </CDropdownItem>
                   </CDropdownMenu>
                 </CDropdown>
               </td>
