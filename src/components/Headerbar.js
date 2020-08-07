@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import HeaderbarProfile from "./HeaderbarProfile";
 import { CHeader, CToggler, CSubheader, CBreadcrumbRouter, CHeaderNav } from "@coreui/react";
-
 // routes config
 import routes from '../routes'
 
