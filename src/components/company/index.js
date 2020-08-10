@@ -94,11 +94,10 @@ function Company() {
   return (
     <CCard>
       <CCardHeader>
-        {" "}
         <CRow>
-          <p style={{ paddingLeft: 15, marginTop: "auto" }}>
+          <h4 style={{ paddingLeft: 15, marginTop: "auto" }}>
             Company ({items.length})
-          </p>
+          </h4>
           <p style={{ margin: "auto" }}></p>
           <CButton
             style={{ width: 100 }}

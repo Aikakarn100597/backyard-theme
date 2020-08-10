@@ -9,6 +9,7 @@ import {
   CForm,
   CCol,
   CButton,
+  CCardTitle,
 } from "@coreui/react";
 
 const fields = [
@@ -60,10 +61,11 @@ function RewardTicket() {
       </CCard>
 
       <CCard>
+
         <CCardHeader>
-          <p style={{ paddingLeft: 15, marginTop: "auto" }}>
+        <CCardTitle>         
             Ticket ({items.length})
-          </p>
+        </CCardTitle>
         </CCardHeader>
         <CCardBody>
           <br />

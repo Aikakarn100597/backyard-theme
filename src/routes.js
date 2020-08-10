@@ -6,13 +6,13 @@ const Dashboard = React.lazy(() => import('./components/Dashboard'));
 const Company = React.lazy(()=> import('./components/company/index'));
 const RewardTicket = React.lazy(()=> import('./components/company/manage/RewardTicket'));
 const Ready = React.lazy(()=> import('./components/company/manage/Ready'));
-const Mention = React.lazy(()=> import('./components/company/manage/Mention'));
+const Mention = React.lazy(()=> import('./components/company/manage/Mentions/Mention'));
 const TokenPantip = React.lazy(()=> import('./components/company/manage/TokenPantip'));
 const JobQueue = React.lazy(()=> import('./components/company/manage/JobQueue'));
 const TriggerCondition = React.lazy(()=> import('./components/company/manage/TriggerCondition'));
 const Bida = React.lazy(()=> import('./components/company/manage/Bida'));
 const FeedHistory = React.lazy(()=> import('./components/company/manage/FeedHistory'));
-const ManualAddLink = React.lazy(()=> import('./components/company/manage/ManualAddLink'));
+const ManualAddLink = React.lazy(()=> import('./components/company/manage/manualAddLink/ManualAddLink'));
 //User
 const ManageUser = React.lazy(() => import('./components/user/ManageUser'));
 const UserOnline = React.lazy(() => import('./components/user/UserOnline'));
