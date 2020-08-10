@@ -13,6 +13,8 @@ import {
 } from "@coreui/react";
 
 class TokenTwitter extends Component {
+  formIsValid = true;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -37,25 +39,24 @@ class TokenTwitter extends Component {
   handleValidation = () => {
     let state = this.state;
     let errors = {};
-    let formIsValid = true;
 
     if (!state.app_id) {
-      formIsValid = false;
+      this.formIsValid = false;
       errors.app_id = "App Id can't be empty!";
     }
 
     if (!state.consumer_key) {
-      formIsValid = false;
+      this.formIsValid = false;
       errors.consumer_key = "Consumer Key can't be empty!";
     }
 
     if (!state.consumer_secret) {
-      formIsValid = false;
+      this.formIsValid = false;
       errors.consumer_secret = "Consumer Secret can't be empty!";
     }
 
     this.setState({ errors: errors });
-    return formIsValid;
+    return this.formIsValid;
   };
 
   tokenSubmit = (e) => {
@@ -75,16 +76,35 @@ class TokenTwitter extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel htmlFor="app_id">App Id</CLabel>
-                    <CInput
-                      id="app_id"
-                      name="app_id"
-                      className="input-width"
-                      placeholder="App Id"
-                      autoComplete="off"
-                      value={this.state.app_id}
-                      onChange={this.handleChange}
-                    />
-                    <span className="error">{this.state.errors.app_id}</span>
+                    {this.formIsValid || this.state.app_id !== "" ? (
+                      <>
+                        <CInput
+                          id="app_id"
+                          name="app_id"
+                          className="input-width"
+                          placeholder="App Id"
+                          autoComplete="off"
+                          value={this.state.app_id}
+                          onChange={this.handleChange}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <CInput
+                          invalid
+                          id="app_id"
+                          name="app_id"
+                          className="input-width"
+                          placeholder="App Id"
+                          autoComplete="off"
+                          value={this.state.app_id}
+                          onChange={this.handleChange}
+                        />
+                        <span className="error">
+                          {this.state.errors.app_id}
+                        </span>
+                      </>
+                    )}
                   </CFormGroup>
                 </CCol>
               </CRow>
@@ -92,16 +112,35 @@ class TokenTwitter extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel htmlFor="consumer_key">Consumer Key</CLabel>
-                    <CInput
-                      id="consumer_key"
-                      name="consumer_key"
-                      className="input-width"
-                      placeholder="Consumer Key"
-                      autoComplete="off"
-                      value={this.state.consumer_key}
-                      onChange={this.handleChange}
-                    />
-                    <span className="error">{this.state.errors.consumer_key}</span>
+                    {this.formIsValid || this.state.consumer_key !== "" ? (
+                      <>
+                        <CInput
+                          id="consumer_key"
+                          name="consumer_key"
+                          className="input-width"
+                          placeholder="Consumer Key"
+                          autoComplete="off"
+                          value={this.state.consumer_key}
+                          onChange={this.handleChange}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <CInput
+                          invalid
+                          id="consumer_key"
+                          name="consumer_key"
+                          className="input-width"
+                          placeholder="Consumer Key"
+                          autoComplete="off"
+                          value={this.state.consumer_key}
+                          onChange={this.handleChange}
+                        />
+                        <span className="error">
+                          {this.state.errors.consumer_key}
+                        </span>
+                      </>
+                    )}
                   </CFormGroup>
                 </CCol>
               </CRow>
@@ -109,16 +148,35 @@ class TokenTwitter extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel htmlFor="consumer_secret">Consumer Secret</CLabel>
-                    <CInput
-                      id="consumer_secret"
-                      name="consumer_secret"
-                      className="input-width"
-                      placeholder="Consumer Secret"
-                      autoComplete="off"
-                      value={this.state.consumer_secret}
-                      onChange={this.handleChange}
-                    />
-                    <span className="error">{this.state.errors.consumer_secret}</span>
+                    {this.formIsValid || this.state.consumer_secret !== "" ? (
+                      <>
+                        <CInput
+                          id="consumer_secret"
+                          name="consumer_secret"
+                          className="input-width"
+                          placeholder="Consumer Secret"
+                          autoComplete="off"
+                          value={this.state.consumer_secret}
+                          onChange={this.handleChange}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <CInput
+                          invalid
+                          id="consumer_secret"
+                          name="consumer_secret"
+                          className="input-width"
+                          placeholder="Consumer Secret"
+                          autoComplete="off"
+                          value={this.state.consumer_secret}
+                          onChange={this.handleChange}
+                        />
+                        <span className="error">
+                          {this.state.errors.consumer_secret}
+                        </span>
+                      </>
+                    )}
                   </CFormGroup>
                 </CCol>
               </CRow>

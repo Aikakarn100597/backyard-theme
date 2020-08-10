@@ -13,6 +13,8 @@ import {
 } from "@coreui/react";
 
 class TokenYoutube extends Component {
+  formIsValid = true;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -35,20 +37,19 @@ class TokenYoutube extends Component {
   handleValidation = () => {
     let state = this.state;
     let errors = {};
-    let formIsValid = true;
 
     if (!state.namespace) {
-      formIsValid = false;
+      this.formIsValid = false;
       errors.namespace = "App Id can't be empty!";
     }
 
     if (!state.token) {
-      formIsValid = false;
+      this.formIsValid = false;
       errors.token = "App Secret can't be empty!";
     }
 
     this.setState({ errors: errors });
-    return formIsValid;
+    return this.formIsValid;
   };
 
   tokenSubmit = (e) => {
@@ -68,17 +69,35 @@ class TokenYoutube extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel htmlFor="namespace">Namespace</CLabel>
-                    <CInput
-                      id="namespace"
-                      name="namespace"
-                      className="input-width"
-                      placeholder="Namespace"
-                      autoComplete="off"
-                      value={this.state.namespace}
-                      onChange={this.handleChange}
-                      
-                    />
-                    <span className="error">{this.state.errors.namespace}</span>
+                    {this.formIsValid || this.state.namespace !== "" ? (
+                      <>
+                        <CInput
+                          id="namespace"
+                          name="namespace"
+                          className="input-width"
+                          placeholder="Namespace"
+                          autoComplete="off"
+                          value={this.state.namespace}
+                          onChange={this.handleChange}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <CInput
+                          invalid
+                          id="namespace"
+                          name="namespace"
+                          className="input-width"
+                          placeholder="Namespace"
+                          autoComplete="off"
+                          value={this.state.namespace}
+                          onChange={this.handleChange}
+                        />
+                        <span className="error">
+                          {this.state.errors.namespace}
+                        </span>
+                      </>
+                    )}
                   </CFormGroup>
                 </CCol>
               </CRow>
@@ -86,18 +105,33 @@ class TokenYoutube extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel htmlFor="token">Token</CLabel>
-                    <CInput
-                      id="token"
-                      name="token"
-                      className="input-width"
-                      placeholder="Token"
-                      autoComplete="off"
-                      value={this.state.token}
-                      onChange={this.handleChange}
-                    />
-                    <span className="error">
-                      {this.state.errors.token}
-                    </span>
+                    {this.formIsValid || this.state.token !== "" ? (
+                      <>
+                        <CInput
+                          id="token"
+                          name="token"
+                          className="input-width"
+                          placeholder="Token"
+                          autoComplete="off"
+                          value={this.state.token}
+                          onChange={this.handleChange}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <CInput
+                          invalid
+                          id="token"
+                          name="token"
+                          className="input-width"
+                          placeholder="Token"
+                          autoComplete="off"
+                          value={this.state.token}
+                          onChange={this.handleChange}
+                        />
+                        <span className="error">{this.state.errors.token}</span>
+                      </>
+                    )}
                   </CFormGroup>
                 </CCol>
               </CRow>
