@@ -25,6 +25,10 @@ const TokenYoutube = React.lazy(() => import('./components/token/TokenYoutube'))
 const ManageWatch = React.lazy(() => import('./components/socialMediaManagement/ManageWatch'))
 const MediaSource = React.lazy(() => import('./components/socialMediaManagement/MediaSource'))
 
+//Support
+const DataFeed = React.lazy(()=> import('./components/support/datafeed/index'));
+const DataKeyword = React.lazy(()=>import('./components/support/datakeyword/index'));
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
 
@@ -42,12 +46,18 @@ const routes = [
 
   { path: '/user/manage-user', name: 'Manage User', component: ManageUser },
   { path: '/user/user-online', name: 'User Online', component: UserOnline },
+
   { path: '/token/facebook', name: 'Facebook', component: TokenFacebook },
   { path: '/token/instagram', name: 'Instagram', component: TokenInstagram },
   { path: '/token/twitter', name: 'Twitter', component: TokenTwitter },
   { path: '/token/youtube', name: 'Youtube', component: TokenYoutube },
+
+  { path: '/support/data-feed',exact: true, name: 'Data Feed', component: DataFeed },
+  { path: '/support/data-keyword',exact: true, name: 'Data Keyword', component: DataKeyword },
+
   { path: '/social-media-management/manage-watch', name: 'Manage Watch', component: ManageWatch },
   { path: '/social-media-management/media-source', name: 'Media Source', component: MediaSource },
+
 ];
 
 export default routes;
