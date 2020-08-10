@@ -10,12 +10,10 @@ import {
   CCardBody,
   CForm,
   CFormGroup,
-  // CInvalidFeedback,
-  // CValidFeedback,
 } from "@coreui/react";
 
 class TokenFacebook extends Component {
-  // formIsValid = true
+  formIsValid = true;
 
   constructor(props) {
     super(props);
@@ -39,7 +37,6 @@ class TokenFacebook extends Component {
   handleValidation = () => {
     let state = this.state;
     let errors = {};
-    this.formIsValid = true;
 
     if (!state.app_id) {
       this.formIsValid = false;
@@ -71,9 +68,9 @@ class TokenFacebook extends Component {
               <CRow>
                 <CCol xs="12">
                   <CFormGroup>
-                    {this.formIsValid ? (
+                    <CLabel htmlFor="app_id">App Id</CLabel>
+                    {this.formIsValid || this.state.app_id !== "" ? (
                       <>
-                        <CLabel htmlFor="app_id">App Id</CLabel>
                         <CInput
                           id="app_id"
                           name="app_id"
@@ -86,7 +83,6 @@ class TokenFacebook extends Component {
                       </>
                     ) : (
                       <>
-                        <CLabel htmlFor="app_id">App Id</CLabel>
                         <CInput
                           invalid
                           id="app_id"
@@ -97,7 +93,9 @@ class TokenFacebook extends Component {
                           value={this.state.app_id}
                           onChange={this.handleChange}
                         />
-                        <span className="error">{this.state.errors.app_id}</span>
+                        <span className="error">
+                          {this.state.errors.app_id}
+                        </span>
                       </>
                     )}
                   </CFormGroup>
@@ -107,18 +105,35 @@ class TokenFacebook extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel htmlFor="app_secret">App Secret</CLabel>
-                    <CInput
-                      id="app_secret"
-                      name="app_secret"
-                      className="input-width"
-                      placeholder="App Secret"
-                      autoComplete="off"
-                      value={this.state.app_secret}
-                      onChange={this.handleChange}
-                    />
-                    <span className="error">
-                      {this.state.errors.app_secret}
-                    </span>
+                    {this.formIsValid || this.state.app_secret !== "" ? (
+                      <>
+                        <CInput
+                          id="app_secret"
+                          name="app_secret"
+                          className="input-width"
+                          placeholder="App Secret"
+                          autoComplete="off"
+                          value={this.state.app_secret}
+                          onChange={this.handleChange}
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <CInput
+                          invalid
+                          id="app_secret"
+                          name="app_secret"
+                          className="input-width"
+                          placeholder="App Secret"
+                          autoComplete="off"
+                          value={this.state.app_secret}
+                          onChange={this.handleChange}
+                        />
+                        <span className="error">
+                          {this.state.errors.app_secret}
+                        </span>
+                      </>
+                    )}
                   </CFormGroup>
                 </CCol>
               </CRow>
