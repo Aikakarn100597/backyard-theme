@@ -157,7 +157,7 @@ function Company() {
             manage: () => (
               <td>
                 <CDropdown className="mt-0">
-                  <CDropdownToggle caret color="info">
+                  <CDropdownToggle caret color="primary">
                     Manage
                   </CDropdownToggle>
                   <CDropdownMenu>

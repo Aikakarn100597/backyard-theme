@@ -8,10 +8,6 @@ import {
   CFormGroup,
   CLabel,
   CInput,
-  CDropdown,
-  CDropdownToggle,
-  CDropdownMenu,
-  CDropdownItem,
   CButton,
   CSelect,
 } from "@coreui/react";
@@ -42,6 +38,7 @@ export default class ManualAddLink extends Component {
                 <CSelect>
                   <option value="Post">Post</option>
                   <option value="Comment">Comment</option>
+                  <option value="3">3</option>
                 </CSelect>
               </CFormGroup>
 
@@ -50,7 +47,7 @@ export default class ManualAddLink extends Component {
                   RESET
                 </CButton>
                 <span> </span>
-                <CButton color="info">SUBMIT</CButton>
+                <CButton color="primary">SUBMIT</CButton>
               </CFormGroup>
             </CForm>
           </CCardBody>

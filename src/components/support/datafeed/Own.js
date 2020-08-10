@@ -17,8 +17,8 @@ export default class Own extends Component {
                                 <CInput placeholder="Search Own"/>
                             </CFormGroup>
                             <CFormGroup>
-                                <CButton color="info">
-                                    SUNMIT
+                                <CButton color="primary">
+                                    SUBMIT
                                 </CButton>
                             </CFormGroup>
                         </CForm>
