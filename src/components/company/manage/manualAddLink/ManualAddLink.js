@@ -13,19 +13,16 @@ import {
   CDropdownMenu,
   CDropdownItem,
   CButton,
+  CSelect,
 } from "@coreui/react";
 import AuditLog from "./AuditLog";
 
 export default class ManualAddLink extends Component {
+  // eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props);
+  }
 
-    // eslint-disable-next-line no-useless-constructor
-    constructor(props) {
-        super(props);
-        this.state ={
-            Datatype : "Post"
-        }
-    }
-    
   render() {
     return (
       <div>
@@ -42,28 +39,24 @@ export default class ManualAddLink extends Component {
 
               <CFormGroup>
                 <CLabel>Data Type</CLabel>
-                <CDropdown className="mt-2"  style={{width:"100%"}}>
-                  <CDropdownToggle style={{textAlign:"left" , width:"100%"}} variant="outline" caret color="dark">
-                    {this.state.Datatype}
-                  </CDropdownToggle>
-                  <CDropdownMenu>
-                    <CDropdownItem onClick={()=> this.setState({Datatype: "Post"})}  > Post</CDropdownItem>
-                    <CDropdownItem onClick={()=>this.setState({Datatype: "Comment"})}>Comment</CDropdownItem>
-                  </CDropdownMenu>
-                </CDropdown>
+                <CSelect>
+                  <option value="Post">Post</option>
+                  <option value="Comment">Comment</option>
+                </CSelect>
               </CFormGroup>
 
               <CFormGroup inline>
-                  <CButton color="dark" variant="outline" >RESET</CButton> 
-                  <span>  </span>
-                  <CButton color="info">SUBMIT</CButton>
+                <CButton color="dark" variant="outline">
+                  RESET
+                </CButton>
+                <span> </span>
+                <CButton color="info">SUBMIT</CButton>
               </CFormGroup>
             </CForm>
           </CCardBody>
         </CCard>
 
-        <AuditLog/>
-        
+        <AuditLog />
       </div>
     );
   }
