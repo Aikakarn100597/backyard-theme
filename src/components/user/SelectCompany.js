@@ -6,11 +6,6 @@ import {
   CCardBody,
   CFormGroup,
   CSelect,
-  CDropdown,
-  CDropdownToggle,
-  CDropdownMenu,
-  CDropdownItem,
-  CDropdownDivider
 } from '@coreui/react'
 
 function SelectCompany() {
@@ -26,8 +21,7 @@ function SelectCompany() {
               </CSelect>
             </CFormGroup>
 
-
-            <CDropdown className="m-1">
+            {/* <CDropdown className="m-1">
               <CDropdownToggle>
                 Dropdown button
               </CDropdownToggle>
@@ -38,7 +32,7 @@ function SelectCompany() {
                 <CDropdownDivider />
                 <CDropdownItem>Another Action</CDropdownItem>
               </CDropdownMenu>
-            </CDropdown>
+            </CDropdown> */}
           </CCardBody>
         </CCard>
       </>
