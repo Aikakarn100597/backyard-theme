@@ -9,7 +9,7 @@ import {
 import CIcon from "@coreui/icons-react";
 
 let profileName = "Dev Computerlogy";
-let profileImg = "avatars/6.jpg";
+let profileImg = "../avatars/6.jpg";
 
 const HeaderbarProfile = () => {
   return (
