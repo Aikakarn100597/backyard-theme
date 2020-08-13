@@ -29,7 +29,7 @@ export default class TokenPantip extends Component {
                 <CLabel>Token</CLabel>
                 <CInput placeholder="Token"/>
               </CFormGroup>
-              <CButton color="info" >SUBMIT</CButton>
+              <CButton color="primary" >SUBMIT</CButton>
             </CForm>
           </CCardBody>
         </CCard>

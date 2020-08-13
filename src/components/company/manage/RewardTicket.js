@@ -51,7 +51,7 @@ function RewardTicket() {
                 <CInput type="date" />
               </CCol>
               <CCol sm="2">
-                <CButton style={{ width: "100%" }} color={"info"}>
+                <CButton style={{ width: "100%" }} color={"primary"}>
                   Search
                 </CButton>
               </CCol>

@@ -66,7 +66,7 @@ export default class Mention extends Component {
                     <ArrInputRadio InputArr={InputRadioArr} />
 
                   </CFormGroup>
-                  <CButton color="info" >SEARCH</CButton>
+                  <CButton color="primary" >SEARCH</CButton>
                 </CForm>
               </CCardBody>
             </CCard>

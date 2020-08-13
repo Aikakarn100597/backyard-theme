@@ -23,7 +23,7 @@ export default class extends Component {
               <CFormGroup>
                 <CTextarea />
               </CFormGroup>
-              <CButton color={"info"}>SEARCH</CButton>
+              <CButton color="primary">SEARCH</CButton>
             </CForm>
           </CCardBody>
         </CCard>

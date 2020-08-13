@@ -42,7 +42,7 @@ export default class index extends Component {
                 </CCol>
                 <CCol sm="2" >
                   <CFormGroup>
-                      <CButton color="info" style={{width:"100%"}} >SUBMIT</CButton>
+                      <CButton color="primary" style={{width:"100%"}} >SUBMIT</CButton>
                   </CFormGroup>
                 </CCol>
               </CRow>
