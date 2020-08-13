@@ -8,10 +8,6 @@ import {
   CFormGroup,
   CLabel,
   CInput,
-  CDropdown,
-  CDropdownToggle,
-  CDropdownMenu,
-  CDropdownItem,
   CButton,
   CSelect,
 } from "@coreui/react";

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Dashboard = React.lazy(() => import('./components/Dashboard'));
 // Company
 const Company = React.lazy(()=> import('./components/company/index'));
@@ -28,6 +27,8 @@ const MediaSource = React.lazy(() => import('./components/socialMediaManagement/
 //Support
 const DataFeed = React.lazy(()=> import('./components/support/datafeed/index'));
 const DataKeyword = React.lazy(()=>import('./components/support/datakeyword/index'));
+
+const Test = React.lazy(() => import('./components/Test'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -57,6 +58,8 @@ const routes = [
 
   { path: '/social-media-management/manage-watch', name: 'Manage Watch', component: ManageWatch },
   { path: '/social-media-management/media-source', name: 'Media Source', component: MediaSource },
+
+  { path: '/test', name: 'Test', component: Test },
 
 ];
 

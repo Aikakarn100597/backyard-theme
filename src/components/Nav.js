@@ -120,6 +120,12 @@ export default [
   {
     _tag: 'CSidebarNavDivider',
     className: 'm-2'
-  }
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Test',
+    to: '/test',
+    icon: 'cil-cloud-upload',
+  },
 ]
 

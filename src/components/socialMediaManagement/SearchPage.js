@@ -41,8 +41,8 @@ class SearchPage extends Component {
                 <CCol xs="12">
                   <CFormGroup>
                     <CLabel style={{ paddingRight: 20 }}>Sort By</CLabel>
-                    {sortBy.map((sortBy) => {
-                      return <CFormGroup variant="custom-radio" inline>
+                    {sortBy.map((sortBy, i) => {
+                      return <CFormGroup variant="custom-radio" inline key={i}>
                         <CInputRadio
                           custom
                           id={sortBy.id}
@@ -63,7 +63,7 @@ class SearchPage extends Component {
 
               <CFormGroup className="form-actions">
                 <CButton
-                  type=""
+                  type="submit"
                   style={{ backgroundColor: "#ff4c6a", color: "white" }}
                 >
                   Search
