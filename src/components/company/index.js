@@ -144,6 +144,7 @@ function Company() {
                     <a
                       href={`/company/editForm/${item.name}`}
                       style={{
+                        color: "#494949",
                         width: 30,
                         outline: "none",
                         border: "none",
@@ -156,6 +157,7 @@ function Company() {
                     <a
                       onClick={toggle}
                       style={{
+                        color: "#494949",
                         width: 30,
                         outline: "none",
                         border: "none",
