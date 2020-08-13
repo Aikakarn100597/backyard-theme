@@ -29,11 +29,8 @@ const MediaSource = React.lazy(() => import('./components/socialMediaManagement/
 const DataFeed = React.lazy(()=> import('./components/support/datafeed/index'));
 const DataKeyword = React.lazy(()=>import('./components/support/datakeyword/index'));
 
-<<<<<<< HEAD
 const Test = React.lazy(() => import('./components/Test'))
-=======
 const UploadFile = React.lazy(()=> import('./components/uploadFile/index'));
->>>>>>> 02aa813839f3452e1bfb59cbdd2c74e7319921b0
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -64,13 +61,8 @@ const routes = [
 
   { path: '/social-media-management/manage-watch', name: 'Manage Watch', component: ManageWatch },
   { path: '/social-media-management/media-source', name: 'Media Source', component: MediaSource },
-
-<<<<<<< HEAD
   { path: '/test', name: 'Test', component: Test },
-=======
-  
   { path: '/upload-file', name: 'Upload File', component: UploadFile },
->>>>>>> 02aa813839f3452e1bfb59cbdd2c74e7319921b0
 
 ];
 
