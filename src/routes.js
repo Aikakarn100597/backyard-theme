@@ -5,7 +5,7 @@ const Dashboard = React.lazy(() => import('./components/Dashboard'));
 // Company
 const Company = React.lazy(()=> import('./components/company/index'));
 const RewardTicket = React.lazy(()=> import('./components/company/manage/RewardTicket'));
-const Ready = React.lazy(()=> import('./components/company/manage/Ready'));
+const Ready = React.lazy(()=> import('./components/company/manage/ready/Ready'));
 const Mention = React.lazy(()=> import('./components/company/manage/Mentions/Mention'));
 const TokenPantip = React.lazy(()=> import('./components/company/manage/TokenPantip'));
 const JobQueue = React.lazy(()=> import('./components/company/manage/JobQueue'));
@@ -13,6 +13,7 @@ const TriggerCondition = React.lazy(()=> import('./components/company/manage/Tri
 const Bida = React.lazy(()=> import('./components/company/manage/Bida'));
 const FeedHistory = React.lazy(()=> import('./components/company/manage/FeedHistory'));
 const ManualAddLink = React.lazy(()=> import('./components/company/manage/manualAddLink/ManualAddLink'));
+const EditForm = React.lazy(()=> import('./components/company/EditCompany'));
 //User
 const ManageUser = React.lazy(() => import('./components/user/ManageUser'));
 const UserOnline = React.lazy(() => import('./components/user/UserOnline'));
@@ -29,7 +30,8 @@ const MediaSource = React.lazy(() => import('./components/socialMediaManagement/
 const DataFeed = React.lazy(()=> import('./components/support/datafeed/index'));
 const DataKeyword = React.lazy(()=>import('./components/support/datakeyword/index'));
 
-const UploadFile = React.lazy(()=> import('./components/uploadFile/index'))
+const UploadFile = React.lazy(()=> import('./components/uploadFile/index'));
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
 
@@ -44,6 +46,7 @@ const routes = [
   { path: '/company/bida', exact: true, name: 'Bida', component: Bida },
   { path: '/company/feedhistory', exact: true, name: 'Feed History', component: FeedHistory },
   { path: '/company/manualaddlink', exact: true, name: 'Manual Add Link', component: ManualAddLink },
+  { path: '/company/editForm/:selectCompony', exact: true, name: 'Edit Form', component: EditForm },
 
   { path: '/user/manage-user', name: 'Manage User', component: ManageUser },
   { path: '/user/user-online', name: 'User Online', component: UserOnline },

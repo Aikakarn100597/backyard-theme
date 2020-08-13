@@ -44,7 +44,7 @@ export default class FeedHistory extends Component {
                 <CCol sm="2">
                   <CFormGroup>
                     {" "}
-                    <CButton style={{ width: "100%" }} color="primary">
+                    <CButton style={{ width: "100%" }} color="info">
                       EXPORT
                     </CButton>
                   </CFormGroup>

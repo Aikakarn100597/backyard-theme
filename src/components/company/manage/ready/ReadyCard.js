@@ -27,7 +27,12 @@ const ReadyCard = (props) => {
             <CCardSubtitle>Time</CCardSubtitle>
             <CCardText>{props.time}</CCardText>
             <CCardSubtitle>Group</CCardSubtitle>
-            <CCardText>{props.group}</CCardText>
+            <CCardText>
+              {console.log(props.group)}
+            {props.group.map((item,index)=>{
+               return index < (item.length-2) ? item+" , " : item;
+            })}
+            </CCardText>
           </CCol>
         </CRow>
       </CCardBody>
